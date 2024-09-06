@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Cep</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"/>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymoucds"
+    />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-    <link rel="stylesheet" href="style2.css" class="css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-md text-bg-dark navbar-dark">
-        <!-- classes:
-        container-fluid: Cria um container que fica bem próximo das bordas da tela
-       -->
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="cor_fundo.css" />
+    <link rel="stylesheet" href="cepstyle.css" />
+  </head>
+  <body>
+    <div class="min-vh-100 d-flex flex-column">
+      <nav class="navbar navbar-expand-md text-bg-dark navbar-dark">
         <div class="container-fluid">
-          <!-- classes:
-          navbar-brand: É para adicionar aquela logo no canto esquerdo da navbar que todo site tem, como eu quero que seja clicável, coloquei numa tag <a>, mas poderia ser em outra, tipo a <span>;
-          h1: Formata o texto como se fosse uma tag <h1>;
-          mb-0: A tag <h1> tem margem abaixo, eu não quero que tenha nesse caso, então usei a abreviação de margin-bottom (mb) e especifiquei o valor 0, esse valor varia de 0 a 5.
-        -->
-          <a href="index.html" class="navbar-brand h1 mb-0">
-            <!-- classes:
-            mb-1: Adiciona margin-bottom (mb) de 1, para saber o tamanho disso, entenda que o Bootstrap usa uma variável que é o equivalente ao rem, se você passa 1, é 0.25rem, 2 é 0.5, 3 é 1rem, 4 é 1.5rem e 5 é 3rem, nesse caso como não editei nada, o rem é 16px.
-          -->
+          <a href="cepindex.html" class="navbar-brand h1 mb-0">
             <img
               src="imagem/lupa-branca.svg"
               width="35px"
@@ -37,14 +30,6 @@
             />
             Buscador de Cep
           </a>
-          <!-- classes:
-          navbar-toggler: Especifica que esse botão que vai ser o que vai controlar menu sanduíche da navbar.
-        atributos:
-          data-bs-toggle: Especifica a ação que esse botão vai fazer;
-          data-bs-target: Especifica o alvo dessa ação;
-          aria-controls: Atributos que começam com aria tem relação com semântica para leitores de tela, esse descreve o que esse botão controla, nesse caso, passei o id da barra de navegação ;
-          aria-label: Descreve a ação.
-        -->
           <button
             class="navbar-toggler"
             type="button"
@@ -53,35 +38,16 @@
             aria-controls="nav"
             aria-label="Expand Navegation"
           >
-            <!-- classes:
-          navbar-toggler-icon: Marca onde o ícone do menu sanduíche vai aparecer, só o botão não é suficiente 
-        -->
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>git branch -m master main
+
           </button>
-          <!-- classes:
-          collapse: Collapse é aquele item que abre e fecha tipo sanfona, aqui to fizendo que os links da barra de navegação serão assim;
-          navbar-collapse: Especifica mais ainda o tipo de collapse.
-        id:
-          existe para conectar com o botão que fará isso colapsar ou não em telas menores.
-        -->
           <div class="collapse navbar-collapse" id="nav">
-            <!-- classes:
-            navbar-nav: Parece confuso, mas essa classe indica que parte da navbar contém os itens para navegar (links), nesse caso, o Bootstrap chamou essa parte de nav. 
-          -->
             <ul class="navbar-nav">
-              <!-- classes:
-              nav-item: Indica que esse é um dos itens da nav. 
-            -->
               <li class="nav-item">
-                <!-- classes:
-                nav-link: Indica que isso é um link de nav, ele adequa a estética sozinho;
-                active: Diz que esse é o link que deve ficar brilhando mais claro para indicar "você está aqui".
-              -->
-                <a href="index.html" class="nav-link active" aria-current="page"
+                <a href="cepindex.html" class="nav-link active" aria-current="page"
                   >Início</a
                 >
               </li>
-        
               <li class="nav-item">
                 <a href="buscar.html" class="nav-link">Buscar Cep</a>
               </li>
@@ -92,12 +58,69 @@
           </div>
         </div>
       </nav>
-      <main class="container-fluid bg-image text-bg-dark flex-grow-1 d-flex align-items-center justify-content-center"
-      id="main"></main> 
-
-    <h1> Olá mundo</h1>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-</body>
+      <main class="flex-grow-1 d-flex">
+        <div
+          id="main-bg-img"
+          class="text-bg-dark container-fluid flex-grow-1 bg-image d-flex align-items-center justify-content-center"
+        >
+          <div class="px-4 py-5 mb-3 text-center">
+            <img
+              class="mb-4"
+              src="imagem/lupa-branca.svg"
+              alt="Lupa"
+              width="120px"
+            />
+            <h1 class="display-5 fw-bold">Buscador de Cep</h1>
+            <div class="col-lg-6 col-sm-8 col-10 mx-auto">
+              <p class="lead mb-4">
+                Buscar CEP nunca foi tão simples. Digite seu endereço e deixe
+                que nossa ferramenta faça o trabalho pesado para você.
+              </p>
+              <div class="d-grid d-sm-flex gap-2 justify-content-sm-center">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg px-4"
+                  onclick="window.location.href='./buscar.html';"
+                >
+                  Buscar Agora
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary btn-lg px-4"
+                  onclick="window.location.href='./sobre.html';"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="text-center text-bg-dark">
+        <section class="container pt-4 mb-4">
+          <a href="#" class="icon-link link-light link-opacity-50-hover mx-2">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="icon-link link-light link-opacity-50-hover mx-2">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="#" class="icon-link link-light link-opacity-50-hover mx-2">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="icon-link link-light link-opacity-50-hover mx-2">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="icon-link link-light link-opacity-50-hover mx-2">
+            <i class="bi bi-github"></i>
+          </a>
+        </section>
+        <div class="text-center py-3">© 2024 Copyright: Buscador de Cep</div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
