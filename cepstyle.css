@@ -1,6 +1,7 @@
-#main {
-    background-image: url("imagem/rome.png");
-    background-position: center;
-    background-size: cover;
-  }
-  
+#main-bg-img {
+  background-image: url("imagem/rome.png");
+  background-position: center;
+  background-size: cover;
+  color: #979797;
+}
+
